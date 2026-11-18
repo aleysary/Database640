@@ -10,11 +10,13 @@ what we learned at class.
 the data type SERIAL is used as the primary key type for most tables, and
 this is bascially an integer that automatically increments with out us having to 
 do anything. This means two things: 
-    1) Tables which have a foreign key referencing a primary key of another table that is 
+    
+1) Tables which have a foreign key referencing a primary key of another table that is 
     SERIAL use INTEGER. Example: the category table's PK is cat_id which is a SERIAL type.
     The table size_option references cat_id as a FK and declares that datatype for cat_id in
     size_option as INTEGER
-    2) When you insert into the table you don't have to add a value for the PK because serial
+    
+2) When you insert into the table you don't have to add a value for the PK because serial
     automatically updates. As an example for the shopping_cart table, normally we would have 
     to do something like: 
     ```
@@ -31,5 +33,5 @@ do anything. This means two things:
 
 # TIMESTAMPTZ
 This is essentially a way to track date/time and it tracks time in UTC, and includes
-the date as well as the time down to the seconds/milliseconds. This (link)[https://www.datacamp.com/doc/postgresql/timestamptz]
+the date as well as the time down to the seconds/milliseconds. This [link](https://www.datacamp.com/doc/postgresql/timestamptz)
 shows a little bit of how to use/input into it
